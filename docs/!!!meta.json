@@ -11,7 +11,7 @@
 			"title": "Public",
 			"notePosition": 130,
 			"prefix": null,
-			"isExpanded": false,
+			"isExpanded": true,
 			"type": "text",
 			"mime": "text/html",
 			"attributes": [
