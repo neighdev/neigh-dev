@@ -1,0 +1,105 @@
+{
+	"formatVersion": 2,
+	"appVersion": "0.60.4",
+	"files": [
+		{
+			"isClone": false,
+			"noteId": "aEeHIF4T9O4M",
+			"notePath": [
+				"aEeHIF4T9O4M"
+			],
+			"title": "Public",
+			"notePosition": 130,
+			"prefix": null,
+			"isExpanded": true,
+			"type": "text",
+			"mime": "text/html",
+			"attributes": [
+				{
+					"type": "relation",
+					"name": "internalLink",
+					"value": "0hIoxUkD3Jvm",
+					"isInheritable": false,
+					"position": 2
+				},
+				{
+					"type": "relation",
+					"name": "imageLink",
+					"value": "eXqkwqZH90ka",
+					"isInheritable": false,
+					"position": 4
+				},
+				{
+					"type": "label",
+					"name": "neighDevPublic",
+					"value": "",
+					"isInheritable": true,
+					"position": 10
+				}
+			],
+			"format": "markdown",
+			"dataFileName": "Public.md",
+			"dirFileName": "Public",
+			"children": [
+				{
+					"isClone": false,
+					"noteId": "57OXAF69YKCh",
+					"notePath": [
+						"aEeHIF4T9O4M",
+						"57OXAF69YKCh"
+					],
+					"title": "Test 2",
+					"notePosition": 10,
+					"prefix": null,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "markdown",
+					"dataFileName": "Test 2.md"
+				},
+				{
+					"isClone": false,
+					"noteId": "0hIoxUkD3Jvm",
+					"notePath": [
+						"aEeHIF4T9O4M",
+						"0hIoxUkD3Jvm"
+					],
+					"title": "testje",
+					"notePosition": 20,
+					"prefix": null,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "markdown",
+					"dataFileName": "testje.md"
+				},
+				{
+					"isClone": false,
+					"noteId": "eXqkwqZH90ka",
+					"notePath": [
+						"aEeHIF4T9O4M",
+						"eXqkwqZH90ka"
+					],
+					"title": "luchtfoto2.x19392.jpg",
+					"notePosition": 40,
+					"prefix": null,
+					"isExpanded": false,
+					"type": "image",
+					"mime": "image/jpg",
+					"attributes": [
+						{
+							"type": "label",
+							"name": "originalFileName",
+							"value": "luchtfoto2.x19392.jpg",
+							"isInheritable": false,
+							"position": 1000
+						}
+					],
+					"dataFileName": "luchtfoto2.x19392.jpg"
+				}
+			]
+		}
+	]
+}
