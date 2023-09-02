@@ -71,9 +71,45 @@
 					"isExpanded": false,
 					"type": "text",
 					"mime": "text/html",
-					"attributes": [],
+					"attributes": [
+						{
+							"type": "relation",
+							"name": "imageLink",
+							"value": "ymrrNK1EdZ2u",
+							"isInheritable": false,
+							"position": 1
+						}
+					],
 					"format": "markdown",
-					"dataFileName": "testje.md"
+					"dataFileName": "testje.md",
+					"dirFileName": "testje",
+					"children": [
+						{
+							"isClone": false,
+							"noteId": "ymrrNK1EdZ2u",
+							"notePath": [
+								"aEeHIF4T9O4M",
+								"0hIoxUkD3Jvm",
+								"ymrrNK1EdZ2u"
+							],
+							"title": "wallpaperflare.com_wallpaper.jpg",
+							"notePosition": 10,
+							"prefix": null,
+							"isExpanded": false,
+							"type": "image",
+							"mime": "image/jpg",
+							"attributes": [
+								{
+									"type": "label",
+									"name": "originalFileName",
+									"value": "wallpaperflare.com_wallpaper.jpg",
+									"isInheritable": false,
+									"position": 1000
+								}
+							],
+							"dataFileName": "wallpaperflare.com_wallpaper.j"
+						}
+					]
 				},
 				{
 					"isClone": false,
@@ -98,6 +134,77 @@
 						}
 					],
 					"dataFileName": "luchtfoto2.x19392.jpg"
+				},
+				{
+					"isClone": false,
+					"noteId": "Pi8IAKZI4g7f",
+					"notePath": [
+						"aEeHIF4T9O4M",
+						"Pi8IAKZI4g7f"
+					],
+					"title": "Menu",
+					"notePosition": 50,
+					"prefix": null,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [
+						{
+							"type": "relation",
+							"name": "internalLink",
+							"value": "0hIoxUkD3Jvm",
+							"isInheritable": false,
+							"position": 1
+						},
+						{
+							"type": "relation",
+							"name": "internalLink",
+							"value": "57OXAF69YKCh",
+							"isInheritable": false,
+							"position": 2
+						}
+					],
+					"format": "markdown",
+					"dataFileName": "Menu.md"
+				},
+				{
+					"isClone": false,
+					"noteId": "xyFnVTEnyqps",
+					"notePath": [
+						"aEeHIF4T9O4M",
+						"xyFnVTEnyqps"
+					],
+					"title": "Main",
+					"notePosition": 60,
+					"prefix": null,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [
+						{
+							"type": "relation",
+							"name": "imageLink",
+							"value": "eXqkwqZH90ka",
+							"isInheritable": false,
+							"position": 1
+						},
+						{
+							"type": "relation",
+							"name": "internalLink",
+							"value": "0hIoxUkD3Jvm",
+							"isInheritable": false,
+							"position": 2
+						},
+						{
+							"type": "relation",
+							"name": "internalLink",
+							"value": "57OXAF69YKCh",
+							"isInheritable": false,
+							"position": 4
+						}
+					],
+					"format": "markdown",
+					"dataFileName": "Main.md"
 				}
 			]
 		}
