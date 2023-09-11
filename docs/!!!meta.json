@@ -201,6 +201,13 @@
 							"value": "57OXAF69YKCh",
 							"isInheritable": false,
 							"position": 4
+						},
+						{
+							"type": "label",
+							"name": "shareRaw",
+							"value": "",
+							"isInheritable": false,
+							"position": 10
 						}
 					],
 					"format": "markdown",
