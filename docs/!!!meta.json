@@ -48,7 +48,7 @@
 						"aEeHIF4T9O4M",
 						"57OXAF69YKCh"
 					],
-					"title": "Test 2",
+					"title": "testing 2",
 					"notePosition": 10,
 					"prefix": null,
 					"isExpanded": false,
@@ -56,7 +56,7 @@
 					"mime": "text/html",
 					"attributes": [],
 					"format": "markdown",
-					"dataFileName": "Test 2.md"
+					"dataFileName": "testing 2.md"
 				},
 				{
 					"isClone": false,
@@ -142,7 +142,7 @@
 						"aEeHIF4T9O4M",
 						"Pi8IAKZI4g7f"
 					],
-					"title": "Menu",
+					"title": "List of tests",
 					"notePosition": 50,
 					"prefix": null,
 					"isExpanded": false,
@@ -165,7 +165,7 @@
 						}
 					],
 					"format": "markdown",
-					"dataFileName": "Menu.md"
+					"dataFileName": "List of tests.md"
 				},
 				{
 					"isClone": false,
@@ -174,7 +174,7 @@
 						"aEeHIF4T9O4M",
 						"xyFnVTEnyqps"
 					],
-					"title": "Main",
+					"title": "Post with an image",
 					"notePosition": 60,
 					"prefix": null,
 					"isExpanded": false,
@@ -211,7 +211,24 @@
 						}
 					],
 					"format": "markdown",
-					"dataFileName": "Main.md"
+					"dataFileName": "Post with an image.md"
+				},
+				{
+					"isClone": false,
+					"noteId": "kEuaDNopQ8cA",
+					"notePath": [
+						"aEeHIF4T9O4M",
+						"kEuaDNopQ8cA"
+					],
+					"title": "index",
+					"notePosition": 70,
+					"prefix": null,
+					"isExpanded": false,
+					"type": "text",
+					"mime": "text/html",
+					"attributes": [],
+					"format": "markdown",
+					"dataFileName": "index.md"
 				}
 			]
 		}
