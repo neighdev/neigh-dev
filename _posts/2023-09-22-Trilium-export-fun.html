@@ -1,0 +1,52 @@
+---
+date: '2023-09-22 18:47:17.579Z'
+dateModified: '2023-09-22 18:47:37.218Z'
+imageLink: 8q4CBYA8cf5U
+internalLink:
+- cQIn5W4Z5Sed
+- 3qT7QvpVEKkA
+noteId: OusxEJSMRrpD
+tags:
+- jekyllPost
+template: GItJfUuuPW0R
+title: Trilium export fun
+---
+
+<div class="ck-content">
+<p><i>Okay, fun is an alternative way to describe it.</i>
+</p>
+<p>To feed <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/en0BPWgHTPu4/cQIn5W4Z5Sed" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a> it's
+          pages I export notes from <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/3qT7QvpVEKkA" href="{% link _wiki/Trilium.html %}">Trilium</a> using
+          a search command and then determining the root note for which to retrieve
+          all the children.  </p>
+<figure class="image image-style-align-right image_resized" style="width:25%;">
+<img src="{% link _posts/2023-09-22-Trilium-export-fun/tree.png %}"/>
+<figcaption>The note tree for Neigh.dev at the time of writing.</figcaption>
+</figure>
+<p>I do this pretty naively by looking through the note list for a note for
+          which the parent is not in the search results. I then recreate the paths
+          to the notes in memory by grabbing each note title and it's parent note
+          title and it's parent note title etc etc. <strong>However, </strong>I found
+          out that the title of a note is not necessarily the same as its filename. </p>
+<p>So I had to parse the <i>!!!meta.json</i> file that is in the export to
+          gather the names of the notes and folders on disk. The <i>!!!meta.json</i> contains
+          the whole note tree that is exported.</p>
+<p>Parsing that file was fun, I took the tree and flattened it into a note
+          id → Note map. Every note has a list containing it's parent notes called
+          the nodePath. (In <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/3qT7QvpVEKkA" href="{% link _wiki/Trilium.html %}">Trilium</a> everything
+          is a note, even folders). Using the nodePath I could further parse the
+          flattened list by checking the dir- or dataFileName.</p><pre><code class="language-text-x-python">meta = json.loads(output.read('!!!meta.json'))
+
+metaNotes: dict[str, dict] = {} # Flattened meta notes 
+stack: list[dict] = [meta['files'][0]] # Start at the root node
+while(stack): # The stack is used to remember the previous branches we took in the tree
+    tos = stack.pop()              # Pop one result of the stack 
+    metaNotes[tos['noteId']] = tos # and add it to our flattened list
+    if tos.get('children'): 
+        for child in tos['children']:
+            stack.append(child) # Add the children to our stack to walk through
+    # If there are no children the stack will have shrunk in size because of the earlier pop
+# The while loop ends when the stack is depleted</code></pre>
+<p><i>It has been a while since I had to traverse trees in code.</i>
+</p>
+</div>
