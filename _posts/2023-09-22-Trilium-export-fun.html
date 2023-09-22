@@ -35,7 +35,7 @@ title: Trilium export fun
           id → Note map. Every note has a list containing it's parent notes called
           the nodePath. (In <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/3qT7QvpVEKkA" href="{% link _wiki/Trilium.html %}">Trilium</a> everything
           is a note, even folders). Using the nodePath I could further parse the
-          flattened list by checking the dir- or dataFileName.</p><pre><code class="language-text-x-python">meta = json.loads(output.read('!!!meta.json'))
+          flattened list by checking the dir- or dataFileName.</p>{% highlight python %}meta = json.loads(output.read('!!!meta.json'))
 
 metaNotes: dict[str, dict] = {} # Flattened meta notes 
 stack: list[dict] = [meta['files'][0]] # Start at the root node
@@ -46,7 +46,7 @@ while(stack): # The stack is used to remember the previous branches we took in t
         for child in tos['children']:
             stack.append(child) # Add the children to our stack to walk through
     # If there are no children the stack will have shrunk in size because of the earlier pop
-# The while loop ends when the stack is depleted</code></pre>
+# The while loop ends when the stack is depleted{% endhighlight %}
 <p><i>It has been a while since I had to traverse trees in code.</i>
 </p>
 </div>
