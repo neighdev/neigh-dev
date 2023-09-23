@@ -5,13 +5,18 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
+        
+      {%- if page.backlinks and page.backlinks.size > 0 -%}
+        <strong>Mentioned on page:</strong>
+        <ul>
+            {%- for backlink in page.backlinks -%}
+                <li><a href="{% link {{backlink.link}} %}">{{ backlink.title }}</a></li>
+            {%- endfor -%}
+        </ul>
+        {% else %}
+        <em>This page is not mentioned anywhere.</em>
+      {%- endif -%}
+
       {%- if site.author %}
         <ul class="contact-list">
           {% if site.author.name -%}
@@ -22,14 +27,19 @@
           {%- endif %}
         </ul>
       {%- endif %}
+      
       </div>
       <div class="footer-col">
         <p>{{ site.description | escape }}</p>
+        <p class="feed-subscribe">
+          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            <svg class="svg-icon grey">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe to the rss feed</span>
+          </a>
+        </p> 
+        {%- include social.html -%}
       </div>
-    </div>
-
-    <div class="social-links">
-      {%- include social.html -%}
     </div>
 
   </div>
