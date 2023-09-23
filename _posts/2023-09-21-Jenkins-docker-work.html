@@ -1,4 +1,5 @@
 ---
+backlinks: []
 date: '2023-09-21 20:42:56.265Z'
 dateModified: '2023-09-22 19:41:16.883Z'
 internalLink:
@@ -17,7 +18,9 @@ title: Jenkins docker workspace headaches
 <p>So today I wanted to add a builder image for <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/en0BPWgHTPu4/cQIn5W4Z5Sed" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a> to
           test the <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/iuET4riugeLa" href="{% link _wiki/Jekyll.html %}">Jekyll</a> build
           before actually committing to <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/JpSYH22oAi0f" href="{% link _wiki/Github.html %}">Github</a>.</p>
-<p>This is the command I tried:</p>{% highlight plain_text %}docker run --rm --volume="./github:/srv/jekyll:Z" jekyll/builder:pages ls -all{% endhighlight %}
+<p>This is the command I tried:</p>
+<p><code>docker run --rm --volume="./github:/srv/jekyll:Z" jekyll/builder:pages ls -all</code>
+</p>
 <p>And it didn't work, it started however the volume was empty!</p>
 <p>So it turns that, as I am running the <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/GRylFbodx8U4" href="{% link _wiki/Jenkins.html %}">Jenkins</a> agent
           in docker, any <i>docker --volume</i> command I give it points to the filesystem
