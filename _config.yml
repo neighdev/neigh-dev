@@ -30,7 +30,6 @@ url: "https://neigh.dev" # the base hostname & protocol for your site, e.g. http
 github_username: neighdev
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed 
   - jekyll-relative-links
@@ -69,11 +68,16 @@ defaults:
     scope:
       path: "" # an empty string here means all files in the project
     values:
-      layout: "default"
+      layout: "page"
+  -
+    scope:
+      path: "_posts" 
+    values:
+      layout: "post" 
 collections:
   pages       :
     output    : true
-    permalink : /page/:path/
+    permalink : /page/:path/ 
   projects       :
     output    : true
     permalink : /project/:path/
