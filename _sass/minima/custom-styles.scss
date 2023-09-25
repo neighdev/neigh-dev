@@ -6,6 +6,12 @@
     display: none;
 }
 
+// hrefs are removed from links to private notes
+a:not([href]) {
+    color: $dm-text-color;
+    font-style: italic;
+    text-decoration: none;
+}
 /*
  * CKEditor 5 (v35.4.0) content styles.
  * Generated on Wed, 14 Dec 2022 12:53:04 GMT.
@@ -29,13 +35,7 @@
     --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
     --ck-todo-list-checkmark-size: 16px;
 }
-
-/* ckeditor5-basic-styles/theme/code.css */
-.ck-content code {
-    background-color: hsla(0, 0%, 78%, 0.3);
-    padding: .15em;
-    border-radius: 2px;
-}
+ 
 /* ckeditor5-font/theme/fontsize.css */
 .ck-content .text-tiny {
     font-size: .7em;
@@ -135,8 +135,8 @@
     display: table-caption;
     caption-side: bottom;
     word-break: break-word;
-    color: var(--ck-color-image-caption-text);
-    background-color: var(--ck-color-image-caption-background);
+    color: $dm-brand-color;
+    background-color: transparent;
     padding: .6em;
     font-size: .75em;
     outline-offset: -1px;
@@ -388,26 +388,7 @@
     font-size: .75em;
     outline-offset: -1px;
 }
-/* ckeditor5-code-block/theme/codeblock.css */
-.ck-content pre {
-    padding: 1em;
-    color: hsl(0, 0%, 20.8%);
-    background: hsla(0, 0%, 78%, 0.3);
-    border: 1px solid hsl(0, 0%, 77%);
-    border-radius: 2px;
-    text-align: left;
-    direction: ltr;
-    tab-size: 4;
-    white-space: pre-wrap;
-    font-style: normal;
-    min-width: 200px;
-}
-/* ckeditor5-code-block/theme/codeblock.css */
-.ck-content pre code {
-    background: unset;
-    padding: 0;
-    border-radius: 0;
-}
+
 /* ckeditor5-horizontal-line/theme/horizontalline.css */
 .ck-content hr {
     margin: 15px 0;
