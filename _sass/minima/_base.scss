@@ -22,7 +22,6 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
-  background-image: url('/assets/Webb-Unveils-Dark-Side-dark-min.png');
   background-size: cover;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -36,7 +35,13 @@ body {
   overflow-wrap: break-word;
 }
 
+.no-webp body {
+  background-image: url("/assets/Webb-Unveils-Dark-Side-dark-min.png");
+}
 
+.webp body{
+  background-image: url("/assets/Webb-Unveils-Dark-Side-dark-min.webp");
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm

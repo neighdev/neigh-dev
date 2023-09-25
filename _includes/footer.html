@@ -33,9 +33,7 @@
         <p>{{ site.description | escape }}</p>
         <p class="feed-subscribe">
           <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon grey">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe to the rss feed</span>
+           <span>Subscribe to the rss feed</span>
           </a>
         </p> 
       </div>
