@@ -1,8 +1,12 @@
 ---
 backlinks: []
+color: '#42f5bf'
 date: '2023-09-19 20:31:55.540Z'
 dateModified: '2023-09-22 19:41:19.665Z'
-internalLink: Xm0CGuAfQab0
+internalLink:
+- Xm0CGuAfQab0
+- iuET4riugeLa
+- cQIn5W4Z5Sed
 noteId: 3ZJ0cBUhhLsL
 tags:
 - jekyllPost
@@ -11,25 +15,28 @@ title: Parsing links
 ---
 
 <div class="ck-content">
-<p>So, the <a href="{% link _posts/2023-09-17-Switched-to-HTML.html %}">previous post</a> did
-          not even come through as linking the different pages together broke down.</p>
-<p> </p>
-<p>{% raw %}I've found that Jekyll transforms pages to have different paths
-          in the browser, which would be annoying if it Jekyll couldn't resolve them
-          for me. Which is done with <span style="color:#ce9178;"><code>{% link yourLinkHere %}</code></span>
+<p><i>So, the </i><a href="{% link _posts/2023-09-17-Switched-to-HTML.html %}"><i>previous post</i></a><i> did not even come through as linking the different pages together broke down.</i>
 </p>
-<p>So I slapped <span style="color:#ce9178;"><code>{% link yourLinkHere %}</code>  </span>around
-          all the relative links in the documents and I thought I was done with it.{%
-          endraw %}</p>
+<p>I've been working on <a class="reference-link" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a> and
+          I've found that <a class="reference-link" href="{% link _wiki/Jekyll.html %}">Jekyll</a> transforms
+          pages to have different paths in the browser, which would be annoying if 
+          <a class="reference-link" href="{% link _wiki/Jekyll.html %}">Jekyll</a> couldn't resolve them for me. Which is done with{% raw
+            %} <span style="color:#ce9178;"><code>{% link yourLinkHere %}</code></span>
+</p>
+<p>So I slapped <span style="color:#ce9178;"><code>{% link yourLinkHere %}</code> </span>{%
+          endraw %}around all the relative links in the documents and I thought I
+          was done with it.</p>
 <p>However, it turns out that all the links should then be relative from
-          the root directory in order for Jekyll to resolve them. </p>
+          the root directory in order for <a class="reference-link" href="{% link _wiki/Jekyll.html %}">Jekyll</a> to
+          resolve them. </p>
 <p>So I fixed that, however! It turns out that spaces in filenames are not
           allowed.</p>
 <p>So I had to check all filenames for spaces and replace them with dashes,
-          then filter all relative links and remove URLEncoding, and replace the
+          then filter all relative links and remove URL encoding, and replace the
           spaces that are left over with dashes.</p>
-<p>I should probably have removed url encoding when I started working with
+<p>I should probably have removed URL encoding when I started working with
           directory paths to begin with, but eh.</p>
 <p>If it works it works.</p>
-<p>If it doesn't work.. Well. It didn't.</p>
+<p>If it doesn't work.. <span class="text-small"><i>Well. It didn't.</i></span>
+</p>
 </div>
