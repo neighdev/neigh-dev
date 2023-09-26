@@ -2,32 +2,47 @@
 backlinks:
 - link: _posts/2023-09-21-Jenkins-docker-work.html
   title: Jenkins docker workspace headaches
+- link: _projects/Neigh-Dev.html
+  title: Neigh Dev
 date: '2023-09-21 20:46:55.886Z'
 dateModified: '2023-09-21 20:46:59.082Z'
+imageLink: 40oHGVMLcO6G
+internalLink:
+- JpSYH22oAi0f
+- 3qT7QvpVEKkA
+- iuET4riugeLa
+- B7S7AZLKRQoe
 noteId: GRylFbodx8U4
 title: Jenkins
 ---
 
 <div class="ck-content">
-<p><i>From Wikipedia, the free encyclopedia</i>
+<p><i>From </i><a href="https://en.wikipedia.org/wiki/Jenkins_(software)"><i>Wikipedia</i></a><i>, the free encyclopedia</i>
 </p>
-<p><strong>Jenkins</strong> is an <a href="https://en.wikipedia.org/wiki/Open_source">open source</a>
-<a href="https://en.wikipedia.org/wiki/Automation">automation</a> <a href="https://en.wikipedia.org/wiki/Server_(computing)">server</a>.
-            It helps automate the parts of <a href="https://en.wikipedia.org/wiki/Software_development">software development</a> related
-            to <a href="https://en.wikipedia.org/wiki/Software_build">building</a>,
-            <a href="https://en.wikipedia.org/wiki/Test_automation">testing</a>, and <a href="https://en.wikipedia.org/wiki/Software_deployment">deploying</a>,
-              facilitating <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>,
-              and <a href="https://en.wikipedia.org/wiki/Continuous_delivery">continuous delivery</a>.
-              It is a server-based system that runs in <a href="https://en.wikipedia.org/wiki/Java_Servlet#Container_servers">servlet containers</a> such
-              as <a href="https://en.wikipedia.org/wiki/Apache_Tomcat">Apache Tomcat</a>.
-              It supports <a href="https://en.wikipedia.org/wiki/Version_control">version control</a> tools,
-              including <a href="https://en.wikipedia.org/wiki/AccuRev_SCM">AccuRev</a>,
-              <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>, <a href="https://en.wikipedia.org/wiki/Subversion_(software)">Subversion</a>,
-                <a href="https://en.wikipedia.org/wiki/Git_(software)">Git</a>, <a href="https://en.wikipedia.org/wiki/Mercurial">Mercurial</a>,
-                  <a href="https://en.wikipedia.org/wiki/Perforce">Perforce</a>, <a href="https://en.wikipedia.org/wiki/ClearCase">ClearCase</a>,
-                    and <a href="https://en.wikipedia.org/wiki/Rational_Team_Concert">RTC</a>,
-                    and can execute <a href="https://en.wikipedia.org/wiki/Apache_Ant">Apache Ant</a>,
-                    <a href="https://en.wikipedia.org/wiki/Apache_Maven">Apache Maven</a>, and <a href="https://en.wikipedia.org/wiki/Sbt">sbt</a> based
-                      projects as well as arbitrary <a href="https://en.wikipedia.org/wiki/Shell_script">shell scripts</a> and
-                      Windows <a href="https://en.wikipedia.org/wiki/Batch_file">batch commands</a>.</p>
+<blockquote>
+<p><strong>Jenkins</strong> is an open source automation server. It helps
+            automate the parts of software development related to building, testing,
+            and deploying, facilitating continuous integration, and continuous delivery.
+            It is a server-based system that runs in servlet containers such as Apache
+            Tomcat. It supports version control tools, including AccuRev, CVS, Subversion,
+            Git, Mercurial, Perforce, ClearCase, and RTC, and can execute Apache Ant,
+            Apache Maven, and sbt based projects as well as arbitrary shell scripts
+            and Windows batch commands.</p>
+</blockquote>
+<p>I'm using Jenkins to automate some hobby projects as well as this site.</p>
+<figure class="image image-style-align-right image_resized" style="width:49.18%;">
+<img src="{% link assets/40oHGVMLcO6G/image.png %}"/>
+<figcaption>The Neigh Dev pipeline</figcaption>
+</figure>
+<p>The steps that are automated are: </p>
+<ul>
+<li>Exporting <a class="reference-link" href="{% link _wiki/Trilium.html %}">Trilium</a> notes
+              and converting them to <a class="reference-link" href="{% link _wiki/Jekyll.html %}">Jekyll</a> pages</li>
+<li>Previewing the result</li>
+<li>Pushing the updated <a class="reference-link" href="{% link _wiki/Jekyll.html %}">Jekyll</a> pages
+              to <a class="reference-link" href="{% link _wiki/Github.html %}">Github</a>
+</li>
+</ul>
+<p>From there on <a class="reference-link" href="{% link _wiki/Netlify.html %}">Netlify</a> will
+            pick it up and host the site.</p>
 </div>
