@@ -16,8 +16,8 @@ title: Trilium export fun
 <div class="ck-content">
 <p><i>Okay, fun is an alternative way to describe it.</i>
 </p>
-<p>To feed <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/en0BPWgHTPu4/cQIn5W4Z5Sed" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a> it's
-          pages I export notes from <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/3qT7QvpVEKkA" href="{% link _wiki/Trilium.html %}">Trilium</a> using
+<p>To feed <a class="reference-link" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a> it's
+          pages I export notes from <a class="reference-link" href="{% link _wiki/Trilium.html %}">Trilium</a> using
           a search command and then determining the root note for which to retrieve
           all the children.  </p>
 <figure class="image image-style-align-right image_resized" style="width:25%;">
@@ -34,9 +34,11 @@ title: Trilium export fun
           the whole note tree that is exported.</p>
 <p>Parsing that file was fun, I took the tree and flattened it into a note
           id → Note map. Every note has a list containing it's parent notes called
-          the nodePath. (In <a class="reference-link" data-note-path="root/aEeHIF4T9O4M/CUXqFJRGq3xE/3qT7QvpVEKkA" href="{% link _wiki/Trilium.html %}">Trilium</a> everything
+          the nodePath. (In <a class="reference-link" href="{% link _wiki/Trilium.html %}">Trilium</a> everything
           is a note, even folders). Using the nodePath I could further parse the
-          flattened list by checking the dir- or dataFileName.</p>{% highlight python %}meta = json.loads(output.read('!!!meta.json'))
+          flattened list by checking the dir- or dataFileName.</p>
+{% highlight python %}
+meta = json.loads(output.read('!!!meta.json'))
 
 metaNotes: dict[str, dict] = {} # Flattened meta notes 
 stack: list[dict] = [meta['files'][0]] # Start at the root node
@@ -47,7 +49,8 @@ while(stack): # The stack is used to remember the previous branches we took in t
         for child in tos['children']:
             stack.append(child) # Add the children to our stack to walk through
     # If there are no children the stack will have shrunk in size because of the earlier pop
-# The while loop ends when the stack is depleted{% endhighlight %}
+# The while loop ends when the stack is depleted
+{% endhighlight %}
 <p><i>It has been a while since I had to traverse trees in code.</i>
 </p>
 </div>
