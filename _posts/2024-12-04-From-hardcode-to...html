@@ -1,0 +1,56 @@
+---
+backlinks: []
+color: '#42f5bf'
+date: '2024-12-04 20:24:04.668Z'
+dateModified: '2024-12-04 20:48:18.775Z'
+internalLink:
+- 3qT7QvpVEKkA
+- cQIn5W4Z5Sed
+- t2Ypcw29AjoX
+- GRylFbodx8U4
+- JpSYH22oAi0f
+- u35tNQnC1kNV
+noteId: irsC0qGZsOdN
+tags:
+- jekyllPost
+template: GItJfUuuPW0R
+title: From hardcode to.. Softcode
+---
+
+<div class="ck-content">
+<p>Lately I've been busy giving all the tools I am using a new coat of paint
+          (Or just pulling the newest stable image). I've replaced the old Nginx
+          Proxy Manager with Traefik as the proxy manager had a tendency (for me
+          at least) to corrupt its data. Now the domains are managed by the labels
+          on their respective docker containers. I've moved most of my domains to
+          CloudFlare (except for <a class="reference-link" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a>)
+          and I've updated the rest of the software.</p>
+<p>Because I'm hosting quite a few services I thought it'd be fun to use
+          the <a class="reference-link" href="{% link _wiki/Trilium.html %}">Trilium</a> export
+          job I made for <a class="reference-link" href="{% link _projects/Neigh-Dev.html %}">Neigh Dev</a> to
+          generate a new site just for me. <i>Though, I don't really expect this site to have any visitors(, except for me of course)</i>.</p>
+<p>I mentioned in <a class="reference-link" href="{% link _posts/2023-12-20-Break-it-yourself.html %}">2023-12-20 Break it yourself</a> that
+          software tends to break by itself. Another weird aspect is that when you
+          build software to solve a problem (or create a problem you want to solve
+          with software), it doesn't automatically solve the same problem in a slightly
+          different location.</p>
+<p>In this case to make it work for an additional site the following things
+          need to be fixed:</p>
+<ul>
+<li>The root note needs to be configured from within <a class="reference-link" href="{% link _wiki/Jenkins.html %}">Jenkins</a> </li>
+<li>It must be possible to select a different target than <a class="reference-link" href="{% link _wiki/Github.html %}">Github</a> 
+            <ul>
+<li>I'd prefer to keep those pages private because they aren't useful to anyone
+                but me.</li>
+</ul>
+</li>
+<li>There is a lot of overlap between the <a class="reference-link" href="{% link _wiki/Python.html %}">Python</a> script
+            and the <a class="reference-link" href="{% link _wiki/Jenkins.html %}">Jenkins</a> script,
+            they need better separation.</li>
+</ul>
+<p>A feature on my wish-list would be to automatically trigger updates to
+          the site, up until now I've always checked the results of an export before
+          giving it my blessing. But there are now enough safeguards in place that
+          I feel comfortable enough letting it decide on its own that it is go-time.</p>
+<p> </p>
+</div>
